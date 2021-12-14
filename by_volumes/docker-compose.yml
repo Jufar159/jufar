@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  web:
+    image: nginx:latest
+    volumes:
+      - /var/www/test2/by_volumes/pypa.conf:/etc/nginx/conf.d/pypa.conf
+      - /var/www/test2/index.html:/var/www/test2/by_volumes/index.html
+    ports:
+      - 5400:5400
